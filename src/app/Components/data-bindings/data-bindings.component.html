@@ -1,0 +1,40 @@
+<h4 style="text-align: center; margin-top: 3%;">Angular 19 Data Bindings</h4>
+<div class="row">
+    <div class="col-4">
+        <h4>Interpolation</h4>
+        <div class="row">
+            <div class="col-4">
+                <h6> {{tutorialName}} </h6>
+                <input type="text" value=" {{currentDate}}" >
+                <input type="{{inputType}}" value=" {{myId}} ">
+                <input type="text" value=" {{tutorialName}} ">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <h4>Property Binding</h4>
+        <div class="row">
+            <div class="col-4">
+                <input type="text" [value]="currentDate" >
+                <input [type]="inputType" [value]="myId">
+                <input type="text" [value]="tutorialName">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <h4>Two Way Binding</h4>
+        <div class="row">
+            <div class="col-4">
+                <h6> {{tutorialName}} </h6>
+                <button class="btn btn-success" style="margin-top: 20px;" (click)="showAlert('Welcome Angular 19')">Show Messege</button>
+                <span (click)="showAlert('I am also part of Angular 19')" style="cursor: pointer;">Click Me Too</span>
+                <input type="text" [(ngModel)]="tutorialName">
+                <button class="btn btn-warning" (click)="changeTutorialName()">Change Tutorial</button>
+            </div>
+        </div>
+    </div>
+</div>
