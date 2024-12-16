@@ -1,0 +1,41 @@
+<h1 class="heading">Structural Directive</h1>
+
+<div class="row pt-3 ">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="bg-danger text-white p-3 text-center rounded shadow">
+            <h4>Div 1</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible"  class="bg-danger text-white p-3 text-center rounded shadow">
+            <h4>Div 2</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div *ngIf="num1 == num2" class="bg-danger text-white p-3 text-center rounded shadow">
+            <h4>Div 3</h4>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-primary px-4 py-2" (click)="showDiv1()">Show</button>
+        <button class="btn btn-secondary ms-2 px-4 py-2" (click)="hideDiv1()">Hide</button>
+    </div>
+
+    <div class="col-3 text-center">
+        <button class="btn btn-primary px-4 py-2" (click)="toggleDiv2()">Toggle</button>
+    </div>
+
+    <div class="col-3 text-center" style="display: flex; justify-content: center; align-items: center;">
+        <input type="text" style="margin-right: 5px;" placeholder="Number 1" [(ngModel)]="num1">
+        <input type="text" placeholder="Number 2" [(ngModel)]="num2">
+    </div>
+
+</div>
+
+

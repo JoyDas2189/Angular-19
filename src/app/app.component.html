@@ -1,1 +1,23 @@
-<app-data-bindings></app-data-bindings>
+<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="landing-page">ANGULAR 19</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="data-bindings">Data Bindings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/structural-directive'">Structural Directives</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/attribute-directive'">Attribute Directives</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"[routerLink]="'/reactive-form'">Reactive Form</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  
